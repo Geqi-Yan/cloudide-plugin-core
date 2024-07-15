@@ -455,7 +455,7 @@ abstract class BaseWebviewContainer implements IframeLike {
                     let acquired = false;
                     let extData = ${extData ? `JSON.parse(${JSON.stringify(JSON.stringify(extData))})` : undefined};
                     let i18n = ${this.i18n ? `JSON.parse(${JSON.stringify(JSON.stringify(this.i18n))})` : undefined};
-                    let extensionPath = '${encodeURIComponent(this.context.extensionPath)}';
+                    let extensionPath = "${encodeURIComponent(this.context.extensionPath)}";
                     return () => {
                         if (acquired) {
 						    throw new Error('An instance of the CloudIDE Plugin API has already been acquired');
